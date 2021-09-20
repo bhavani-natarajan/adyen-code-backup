@@ -22,19 +22,19 @@ export class CheckoutComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((params: any) => {
       this.queryParams = params;
       this.makeDetailsCall();
-      
+
     });
-}
+  }
 
   makeDetailsCall() {
-    const request = {"details":{"redirectResult":this.queryParams.redirectResult}};
+    const request = { "details": { "redirectResult": this.queryParams.redirectResult } };
     this.http.paymentDetails(request).subscribe(
       response => this.showMessage(response)
     );
   }
 
-  showMessage(response: any){
-    if(response.resultCode === "Authorised")
+  showMessage(response: any) {
+    if (response.resultCode === "Authorised")
       this.router.navigate(['/success']);
     else
       this.router.navigate(['/error']);

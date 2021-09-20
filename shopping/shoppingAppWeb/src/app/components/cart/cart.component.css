@@ -1,1 +1,4 @@
-
+.cart-section{
+    display: inline-block; 
+    vertical-align: top;
+}

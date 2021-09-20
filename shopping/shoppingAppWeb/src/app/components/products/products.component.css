@@ -1,0 +1,7 @@
+.addMessage {
+    display: block;
+    margin-top: 10px;
+    background-color: lightblue;
+    color: black;
+    width: 110px;
+  }

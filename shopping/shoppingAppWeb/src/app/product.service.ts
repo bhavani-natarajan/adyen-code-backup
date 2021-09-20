@@ -12,12 +12,12 @@ export class ProductService {
       {
         _id: 1,
         name: "Toy Story Sheriff Woody Action Figure 16",
-        price: "20",
+        price: "16",
         image: "../../assets/image/prod1.jpg"
       },
       {
         _id: 2,
-        name: "Clown Plush Toy",
+        name: "Colourful Clown Plush Soft Toy",
         price: "15",
         image: "../../assets/image/prod2.png"
       },
@@ -28,21 +28,21 @@ export class ProductService {
         image: "../../assets/image/prod3.jfif"
       }
     ]
-   }
+  }
 
   getAllProducts() {
     return this.products;
   }
 
-  getCartItems(){
+  getCartItems() {
     return this.cartItems;
   }
 
-  addToCart(product: any){
+  addToCart(product: any) {
     this.cartItems.push(product);
   }
 
-  clearCart(){
+  clearCart() {
     this.cartItems = [];
   }
 }

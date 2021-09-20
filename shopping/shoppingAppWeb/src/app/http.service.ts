@@ -5,11 +5,11 @@ import { environment } from '../environments/environment';
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   getPaymentMethods() {
-    const headers = new HttpHeaders({'Content-Type': 'application/json'});
-    const options = {headers: headers};
-    return this.http.get(`http://localhost:8080/web/paymentMethods`,options);
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const options = { headers: headers };
+    return this.http.get(`http://localhost:8080/web/paymentMethods`, options);
   }
   makePayment(request: any) {
     return this.http.post(`http://localhost:8080/web/payments`, request);

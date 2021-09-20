@@ -1,0 +1,28 @@
+<section>
+    <div class="spacer">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-9">
+            <div class="row shop-listing">
+              <div class="col-lg-4" *ngFor="let product of products">
+                <div class="card shop-hover border-0">
+                  <img [src]="product.image" width="130" height="180" />
+                  <div class="align-items-center" style="padding-top: 20px;">
+                    <button class="btn btn-md btn-info" (click)="_addItemToCart(product)">Add to Cart</button>
+                  </div>
+                </div>
+                <div class="card border-0">
+                  <h6>
+                    <a href="#" class="link">{{ product.name }}</a>
+                  </h6>
+                  <h5 class="font-medium m-b-30">
+                    ${{product.price}}
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

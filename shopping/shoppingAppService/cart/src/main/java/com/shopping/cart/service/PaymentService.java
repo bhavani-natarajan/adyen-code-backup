@@ -18,23 +18,30 @@ public class PaymentService {
 
 	public String retrievePaymentMethods() throws Exception {
 		String request = "{ \"merchantAccount\": \"AdyenRecruitmentCOM\", \"countryCode\": \"CN\"}";
-		return client.invokeService(request, HttpMethod.POST,
+		System.out.println(request);
+		String response = client.invokeService(request, HttpMethod.POST,
 				new ParameterizedTypeReference<String>() {
 				}, "paymentMethods");
+		System.out.println(response);
+		return response;
 	}
 	
 	public String makePayment(String request) throws Exception {
-	//	String request = "{ \"merchantAccount\": \"AdyenRecruitmentCOM\"}";
-		return client.invokeService(request, HttpMethod.POST,
+		System.out.println(request);
+		String response = client.invokeService(request, HttpMethod.POST,
 				new ParameterizedTypeReference<String>() {
 				}, "payments");
+		System.out.println(response);
+		return response;
 	}
 	
 	public String paymentDetails(String request) throws Exception {
-		//	String request = "{ \"merchantAccount\": \"AdyenRecruitmentCOM\"}";
-			return client.invokeService(request, HttpMethod.POST,
+			System.out.println(request);
+			String response = client.invokeService(request, HttpMethod.POST,
 					new ParameterizedTypeReference<String>() {
 					}, "payments/details");
+			System.out.println(response);
+			return response;
 		}
 
 }

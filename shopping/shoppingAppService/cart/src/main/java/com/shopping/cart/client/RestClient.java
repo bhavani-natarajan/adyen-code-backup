@@ -38,7 +38,9 @@ public class RestClient {
 	}
 	
 	private String getUrl(final String methodName) {
-		return "https://checkout-test.adyen.com/v67/".concat(methodName);
+		String url = "https://checkout-test.adyen.com/v67/".concat(methodName);
+		System.out.println(url);
+		return url;
 	}
 	
 	private HttpHeaders setHeader() {

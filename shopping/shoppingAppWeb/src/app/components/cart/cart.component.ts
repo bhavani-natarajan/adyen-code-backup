@@ -95,7 +95,7 @@ export class CartComponent implements OnInit {
   }
 
   makePayment(stateData: any) {
-    const request = { "amount": { "currency": "USD", "value": this.total }, "channel": "Web", "billingAddress": stateData.billingAddress, "shopperEmail": "test.test@tset.com", "shopperIP": "10.0.0.10", "reference": "Bhavani_checkoutChallenge", "paymentMethod": stateData.paymentMethod, "browserInfo": stateData.browserInfo, "origin": "http://localhost:8000", "returnUrl": "http://localhost:8000/checkout", "merchantAccount": "AdyenRecruitmentCOM" };
+    const request = { "amount": { "currency": "USD", "value": this.total * 100 }, "channel": "Web", "billingAddress": stateData.billingAddress, "shopperEmail": "test.test@tset.com", "shopperIP": "10.0.0.10", "reference": "Bhavani_checkoutChallenge", "paymentMethod": stateData.paymentMethod, "browserInfo": stateData.browserInfo, "origin": "http://localhost:8000", "returnUrl": "http://localhost:8000/checkout", "merchantAccount": "AdyenRecruitmentCOM" };
     return this.http.makePayment(request).toPromise();
   }
 

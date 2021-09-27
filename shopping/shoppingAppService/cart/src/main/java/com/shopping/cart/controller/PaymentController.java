@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.shopping.cart.bean.PaymentMethod;
 import com.shopping.cart.service.PaymentService;
 
 @RestController

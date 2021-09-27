@@ -8,7 +8,6 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 
-import com.shopping.cart.bean.PaymentMethod;
 import com.shopping.cart.client.RestClient;
 
 @Component

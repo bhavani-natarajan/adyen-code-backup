@@ -14,8 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-import com.shopping.cart.handler.AdyenResponseHandler;
-
 
 @Component
 public class RestClient {
